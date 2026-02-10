@@ -1,642 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Kliqit is the ultimate growth platform for fashion retailers in India. Streamline billing, inventory, staff management, and launch your online store instantly—no coding required. Join hundreds of retailers scaling their business.">
-    <meta name="keywords"
-        content="fashion retail software, billing software, inventory management, online store builder, retail POS, fashion store management, India retail software">
-    <meta name="author" content="Kliqit">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#2563eb">
-
-    <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.kliqit.com/">
-    <meta property="og:title" content="Kliqit - The All-in-One Growth Engine for Fashion Retailers">
-    <meta property="og:description"
-        content="Stop juggling billing, inventory, and staff management manually. Kliqit helps you streamline operations and launch your online store—instantly. No coding required.">
-    <meta property="og:image" content="https://www.kliqit.com/assets/images/topimage.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Kliqit">
-    <meta property="og:locale" content="en_IN">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.kliqit.com/">
-    <meta name="twitter:title" content="Kliqit - The All-in-One Growth Engine for Fashion Retailers">
-    <meta name="twitter:description"
-        content="Streamline billing, inventory, and staff management. Launch your online fashion store instantly—no coding required.">
-    <meta name="twitter:image" content="https://www.kliqit.com/assets/images/topimage.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0220T805XS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-0220T805XS');
-    </script>
-
-    <title>Kliqit - The All-in-One Growth Engine for Fashion Retailers</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS will go here */
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --light-blue: #dbeafe;
-            --dark-text: #1f2937;
-            --light-text: #6b7280;
-            --light-bg: #f9fafb;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-text);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .header {
-            background: var(--white);
-            padding: 1rem 0;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark-text);
-            text-decoration: none;
-        }
-
-        .logo::before {
-            content: "⚡";
-            margin-right: 0.5rem;
-            background: var(--dark-text);
-            color: var(--white);
-            padding: 0.25rem;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .header-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-        }
-
-        .btn:hover {
-            transform: translateY(-1px);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 4rem 0;
-            background: var(--light-bg);
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: var(--dark-text);
-        }
-
-        .hero-text p {
-            font-size: 1.125rem;
-            color: var(--light-text);
-            margin-bottom: 2rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero-features {
-            display: flex;
-            gap: 2rem;
-            font-size: 0.875rem;
-        }
-
-        .hero-features span::before {
-            content: "✓";
-            color: var(--primary-color);
-            margin-right: 0.5rem;
-        }
-
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Section Heading */
-        .section-heading {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-heading h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .section-heading p {
-            font-size: 1.125rem;
-            color: var(--light-text);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Features Grid */
-        .features {
-            padding: 4rem 0;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .feature-card.highlight {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .feature-icon {
-            width: 3rem;
-            height: 3rem;
-            background: var(--light-blue);
-            border-radius: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-            font-size: 1.5rem;
-        }
-
-        .feature-card.highlight .feature-icon {
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: var(--light-text);
-        }
-
-        .feature-card.highlight p {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        /* Product Showcase */
-        .product-showcase {
-            padding: 4rem 0;
-            background: var(--light-bg);
-        }
-
-        .showcase-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .showcase-text h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .showcase-text h2 .highlight {
-            color: var(--primary-color);
-        }
-
-        .showcase-text p {
-            font-size: 1.125rem;
-            color: var(--light-text);
-            margin-bottom: 2rem;
-        }
-
-        .showcase-features {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .showcase-feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .showcase-feature-icon {
-            width: 2rem;
-            height: 2rem;
-            background: var(--light-blue);
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-color);
-            flex-shrink: 0;
-        }
-
-        .showcase-feature h4 {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .showcase-feature p {
-            color: var(--light-text);
-            margin: 0;
-        }
-
-        .showcase-image {
-            position: relative;
-        }
-
-        .showcase-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 1rem;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--white);
-            padding: 4rem 0;
-            text-align: center;
-            border-radius: 2rem;
-            margin: 2rem 0;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .cta p {
-            font-size: 1.125rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--white);
-            padding: 3rem 0 2rem;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-brand p {
-            color: var(--light-text);
-            margin-top: 1rem;
-        }
-
-        .footer-column h4 {
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-column ul li a {
-            color: var(--light-text);
-            text-decoration: none;
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--primary-color);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #e5e7eb;
-            color: var(--light-text);
-            font-size: 0.875rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-
-            .hero-content,
-            .showcase-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            .section-heading h2 {
-                font-size: 2rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+    content="Kliqit - The all-in-one platform for local retail growth and management. Manage inventory, billing, staff, and launch your online store instantly.">
+<meta name="keywords"
+    content="retail management, online store builder, inventory management, billing software, local retail, ecommerce, Kliqit">
+<meta name="author" content="JARVIS">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kliqit.com/">
+<meta property="og:title" content="Kliqit - Manage Your Store, Grow Online">
+<meta property="og:description"
+    content="The all-in-one platform for local retail growth and management. Manage inventory, billing, staff, and launch your online store instantly.">
+<meta property="og:image" content="assets/images/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://kliqit.com/">
+<meta property="twitter:title" content="Kliqit - Manage Your Store, Grow Online">
+<meta property="twitter:description"
+    content="The all-in-one platform for local retail growth and management. Manage inventory, billing, staff, and launch your online store instantly.">
+<meta property="twitter:image" content="assets/images/logo.png">
+
+<title>Kliqit - Manage Your Store, Grow Online</title>
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="stylesheet" href="styles.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <img style="width: 100px;" src="assets/images/logo.png" alt="Kliqit logo">
-                <div class="header-buttons">
-                    <a href="https://wa.me/919727059914" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-whatsapp"></i>
-                        Enquire on WhatsApp
-                    </a>
-                </div>
+
+    <!-- Header / Nav -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img width="140px" src="assets/images/logo.png" alt="Logo">
+
             </div>
+            <ul class="nav-links">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Growth</a></li>
+                <li><a href="#">Analytics</a></li>
+            </ul>
+            <a href="https://wa.me/919727059914" class="btn btn-primary desktop-btn">Get Early Access</a>
+
+            <!-- Mobile Menu Button -->
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu">
+            <span class="close-menu"><i class="fa-solid fa-xmark"></i></span>
+            <ul>
+                <li><a href="#" class="mobile-link">Features</a></li>
+                <li><a href="#" class="mobile-link">Growth</a></li>
+                <li><a href="#" class="mobile-link">Analytics</a></li>
+                <li><a href="https://wa.me/919727059914" class="btn btn-primary">Get Early Access</a></li>
+            </ul>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 1rem;">Launching Soon</p>
-                    <h1>The All-in-One Growth Engine for Fashion Retailers</h1>
-                    <p>Stop juggling billing, inventory, and staff management manually. Kliqit helps you streamline
-                        operations and launch your online store—instantly .</p>
-                    <div class="hero-buttons">
-                        <a href="https://wa.me/+919727059914" target="_blank" class="btn btn-primary">Get Early
-                            Access</a>
-                        <a href="https://wa.me/+919727059914" target="_blank" class="btn btn-secondary">View Demo</a>
-                    </div>
-                    <div class="hero-features">
-                        <span>No credit card required</span>
-                        <span>Setup in 5 minutes</span>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="assets/images/topimage.png"
-                        alt="Kliqit mobile app interface showing dashboard and analytics">
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container reveal">
+            <div class="badge">🚀 Launching Soon</div>
+            <h1>Manage Your Store. <br><span>Grow Online. One App.</span></h1>
+            <p>Kliqit helps local retail shops manage offline operations and instantly create an online store to reach
+                more customers.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/919727059914" class="btn btn-primary">Get Early Access</a>
+                <a href="#" class="btn btn-outline"><i class="fa-solid fa-play-circle"></i> Watch Demo</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-heading">
+        <!-- Feature Showcase (Devices) -->
+        <section class="feature-showcase container reveal">
+            <div class="feature-text">
+                <h2>The All-in-One Growth Engine for Fashion Retailers</h2>
+                <p>Stop juggling billing, inventory, and staff management manually. Kliqit helps you streamline
+                    operations and launch your online store instantly—no coding required.</p>
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-circle-check"></i> No credit card required</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Setup in 5 minutes</li>
+                </ul>
+            </div>
+            <div class="feature-image">
+                <img src="assets/images/Top.png" alt="Dashboard Mockup">
+            </div>
+        </section>
+
+        <!-- Feature Grid -->
+        <section class="feature-grid container">
+            <div class="section-title reveal">
                 <h2>Say Goodbye to Retail Headaches</h2>
-                <p>Running a fashion store is hard work. Kliqit simplifies the complex parts so you can focus on your
-                    customers and trends.</p>
+                <p>Powerful Features for Modern Retail. Everything you need to run your business in one place.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-invoice"></i>
-                    </div>
-                    <h3>Smart Billing</h3>
-                    <p>Generate professional invoices instantly. Handle returns, exchanges, and discounts without the
-                        math errors.</p>
+            <div class="grid reveal">
+                <div class="card">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <h3>Inventory</h3>
+                    <p>Track stock in real-time across multiple locations.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-boxes"></i>
-                    </div>
-                    <h3>Inventory Control</h3>
-                    <p>Real-time tracking of stock levels. Get low-stock alerts and manage variants like size and color
-                        effortlessly.</p>
+                <div class="card">
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Online Store</h3>
+                    <p>Launch a professional website in seconds.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Staff Management</h3>
-                    <p>Track employee sales performance, manage shifts, and handle permissions securely in one place.
-                    </p>
+                <div class="card">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <h3>Billing & Orders</h3>
+                    <p>Seamless checkout and order management.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Expense Tracker</h3>
-                    <p>Keep a clear eye on your overheads. Log daily expenses and see your true profit margins at a
-                        glance.</p>
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Staff & Payroll</h3>
+                    <p>Manage attendance, permissions, and salaries.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Beat Competitors</h3>
-                    <p>Access data-driven insights to stock the right items at the right time. Stay one step ahead of
-                        market trends.</p>
+                <!-- Row 2 -->
+                <div class="card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Finance Tracking</h3>
+                    <p>Monitor expenses and profit margins instantly.</p>
                 </div>
-                <div class="feature-card highlight">
-                    <div class="feature-icon">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3>Sell Online Instantly</h3>
-                    <p>No website fees. Launch a beautiful online catalog in clicks and share directly with customers.
-                    </p>
+                <div class="card">
+                    <i class="fa-solid fa-shirt"></i>
+                    <h3>Virtual Try-On</h3>
+                    <p>AI-powered try-on for fashion retailers.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Local Pickup</h3>
+                    <p>Offer click-and-collect for nearby shoppers.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h3>Mobile App</h3>
+                    <p>Manage your entire store from your pocket.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Product Showcase -->
-    <section class="product-showcase">
-        <div class="container">
-            <div class="showcase-content">
-                <div class="showcase-text">
-                    <h2>Your Online Store, <span class="highlight">Without the Headache</span></h2>
-                    <p>Don't spend thousands on website builders. Kliqit creates a stunning, mobile-ready product
-                        catalog for you automatically.</p>
-                    <div class="showcase-features">
-                        <div class="showcase-feature">
-                            <div class="showcase-feature-icon">
-                                <i class="fas fa-share-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Share Everywhere</h4>
-                                <p>Send product files directly to customers on WhatsApp, Instagram, or Facebook.</p>
-                            </div>
-                        </div>
-                        <div class="showcase-feature">
-                            <div class="showcase-feature-icon">
-                                <i class="fas fa-sync-alt"></i>
-                            </div>
-                            <div>
-                                <h4>Zero Maintenance</h4>
-                                <p>Inventory syncs automatically. Sell an item in-store, and it updates online
-                                    instantly.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="showcase-image">
-                    <img src="assets/images/middleimage.png"
-                        alt="Mobile phone showing product catalog with clothing items">
+        <!-- Hyperlocal Section -->
+        <section class="hyperlocal container reveal">
+            <div class="hyperlocal-bg"
+                style="background-image: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=80');">
+                <div class="hyperlocal-card">
+                    <h2>Hyperlocal Discovery</h2>
+                    <p>Customers can search products near them and compare items.</p>
+                    <a href="https://wa.me/919727059914" class="btn btn-primary">Start Selling Locally</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="container">
-        <div class="cta">
-            <h2>Ready to Transform Your Retail Business?</h2>
-            <p>Join hundreds of fashion retailers scaling up with Kliqit. Launching soon.</p>
-            <a href="https://wa.me/+919727059914" target="_blank" class="btn btn-secondary">
-                <i class="fab fa-whatsapp"></i>
-                Chat with us on WhatsApp
-            </a>
-        </div>
-    </section>
+        <!-- Comparison Section -->
+        <section class="comparison container reveal">
+            <div class="comp-text">
+                <h2>Your Competitors Are Still Offline. <br><span>You Won't Be.</span></h2>
+                <p>90% of local shops rely on luck and notebooks. Kliqit gives you the modern edge.</p>
+                <div class="comp-table">
+                    <div class="comp-row"><span>Online Visibility</span> <span class="badge-green">Kliqit: Yes</span>
+                    </div>
+                    <div class="comp-row"><span>Inventory Mgmt</span> <span class="badge-green">Automated</span></div>
+                    <div class="comp-row"><span>Customer Reach</span> <span class="badge-green">Unlimited</span></div>
+                    <div class="comp-row"><span>Analytics</span> <span class="badge-green">Real-time</span></div>
+                </div>
+            </div>
+            <div class="comp-image">
+                <img src="assets/images/difference.png" alt="Modern Store Illustration">
+            </div>
+        </section>
+
+        <!-- Analytics Dashboard (Dark Section) -->
+        <section class="dark-section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Smarter Decisions, Higher Profits</h2>
+                    <p>Real-time reports on sales, inventory value, and employee performance.</p>
+                </div>
+                <div class="stats-grid reveal">
+                    <div class="stat-card">
+                        <small>Total Sales</small>
+                        <h3 class="counter" data-target="24500">₹0</h3>
+                        <span class="trend">↑ 12% vs last week</span>
+                    </div>
+                    <div class="stat-card">
+                        <small>Active Orders</small>
+                        <h3 class="counter" data-target="42">0</h3>
+                        <span class="note">8 pending pickup</span>
+                    </div>
+                    <div class="stat-card">
+                        <small>Low Stock Items</small>
+                        <h3 class="counter" data-target="5">0</h3>
+                        <span class="note-red">Needs attention</span>
+                    </div>
+                </div>
+                <img src="assets/images/stats.png" alt="Analytics Dashboard" class="dashboard-img reveal">
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="cta-banner container reveal">
+            <div class="cta-content">
+                <h2>Take Your Store Online & Grow Faster</h2>
+                <p>Join hundreds of local retailers who are beating the competition with Kliqit.</p>
+                <a href="https://wa.me/919727059914" class="btn btn-white">Get Early Access</a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img style="width: 100px;" src="assets/images/logo.png" alt="Kliqit logo">
-                    <p>The ultimate platform for fashion retail growth—billing, inventory, staff, and online store, all
-                        in one dashboard.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#">Billing</a></li>
-                        <li><a href="#">Inventory</a></li>
-                        <li><a href="#">Online Store</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img width="90px" src="assets/images/logo.png" alt="Logo">
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 Kliqit. All rights reserved.</p>
+            <p>The all-in-one platform for local retail growth and management.</p>
+            <p class="powered-by">A Product by <strong>JARVIS</strong></p>
+        </div>
+        <div class="footer-links">
+            <h4>Platform</h4>
+            <ul>
+                <li><a href="#">Inventory</a></li>
+                <li><a href="#">Online Store</a></li>
+                <li><a href="#">Analytics</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 JARVIS. All rights reserved.</p>
+            <div class="socials">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919727059914" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // 1. Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Trigger once on load
+        revealOnScroll();
+
+        // 2. Number Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        let hasCounted = false;
+
+        const startCounters = () => {
+            if (hasCounted) return;
+
+            const statsSection = document.querySelector('.stats-grid');
+            const sectionPos = statsSection.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.3;
+
+            if (sectionPos < screenPos) {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const isCurrency = counter.innerText.includes('$');
+                    const increment = target / 100;
+
+                    const updateCounter = () => {
+                        const c = +counter.innerText.replace(/\D/g, ''); // Remove non-digits
+                        if (c < target) {
+                            const val = Math.ceil(c + increment);
+                            counter.innerText = isCurrency ? `$${val.toLocaleString()}` : val;
+                            setTimeout(updateCounter, 20);
+                        } else {
+                            counter.innerText = isCurrency ? `$${target.toLocaleString()}` : target;
+                        }
+                    };
+                    updateCounter();
+                });
+                hasCounted = true;
+            }
+        };
+
+        window.addEventListener('scroll', startCounters);
+
+        // 3. 3D Tilt Effect for Cards
+        const cards = document.querySelectorAll('.card');
+
+        // Check if device supports hover (desktop)
+        const isHoverCapable = window.matchMedia('(hover: hover)').matches;
+
+        if (isHoverCapable) {
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
+                    const rotateY = ((x - centerX) / centerX) * 10;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+                });
+            });
+        }
+
+        // 4. Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMenu = document.querySelector('.close-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+
+        const closeMobileMenu = () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeMenu.addEventListener('click', closeMobileMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    </script>
+
 </body>
 
 </html>
